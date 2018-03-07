@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Deck {
     Card[] cards;
 
@@ -18,5 +22,11 @@ public class Deck {
 
     public Card[] getCards() {
         return cards;
+    }
+
+    public void shuffle() {
+        List<Card> shuffledList = Arrays.asList(this.cards);
+        Collections.shuffle(shuffledList);
+        shuffledList.toArray(this.cards);
     }
 }

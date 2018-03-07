@@ -40,6 +40,7 @@ public class DeckTest {
                 searchResult = true;
             }
         }
-        assertEquals(true, searchResult);
+        assertTrue(searchResult);
     }
+
 }
