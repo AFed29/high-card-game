@@ -50,4 +50,10 @@ public class Game {
         }
         return winners;
     }
+
+    public ArrayList<Player> playGame(int cardsPerPlayer) {
+        deck.shuffle();
+        deal(cardsPerPlayer);
+        return findWinner();
+    }
 }
