@@ -43,4 +43,11 @@ public class DeckTest {
         assertTrue(searchResult);
     }
 
+    @Test
+    public void canGetCardAtIndex() {
+        Card card = deck.getCard(0);
+        assertEquals(Suit.HEARTS, card.getSuit());
+        assertEquals(Rank.TWO, card.getRank());
+    }
+
 }

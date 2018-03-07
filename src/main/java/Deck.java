@@ -29,4 +29,8 @@ public class Deck {
         Collections.shuffle(shuffledList);
         shuffledList.toArray(this.cards);
     }
+
+    public Card getCard(int index) {
+        return cards[index];
+    }
 }
