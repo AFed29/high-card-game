@@ -26,16 +26,28 @@ public class GameTest {
     }
 
     @Test
-    public void canDealOneCardGame(){
+    public void canDealOneCardGame() {
         game.deal(1);
         assertEquals(1, player1.getHand().size());
         assertEquals(1, player2.getHand().size());
     }
 
     @Test
-    public void canDealTwoCardGame(){
+    public void canDealTwoCardGame() {
         game.deal(2);
         assertEquals(2, player1.getHand().size());
         assertEquals(2, player2.getHand().size());
+    }
+
+    @Test
+    public void findHighestHandValue() {
+        game.deal(2);
+        assertEquals(8, game.highestHandValue());
+    }
+
+    @Test
+    public void findWinnerOneWinner() {
+        game.deal(1);
+        assertEquals(player2, game.findWinner().get(0));
     }
 }

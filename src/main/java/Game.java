@@ -29,4 +29,25 @@ public class Game {
             }
         }
     }
+
+    public int highestHandValue() {
+        int highestHandValue = 0;
+        for (Player player : players) {
+            if (player.getHandValue() > highestHandValue) {
+                highestHandValue = player.getHandValue();
+            }
+        }
+        return highestHandValue;
+    }
+
+    public ArrayList<Player> findWinner() {
+        ArrayList<Player> winners = new ArrayList<>();
+        int highestHandValue = highestHandValue();
+        for (Player player : players) {
+            if (player.getHandValue() == highestHandValue) {
+                winners.add(player);
+            }
+        }
+        return winners;
+    }
 }
